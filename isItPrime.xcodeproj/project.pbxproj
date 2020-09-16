@@ -13,6 +13,12 @@
 		CBDC317425123AF100BC0B72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDC317325123AF100BC0B72 /* Assets.xcassets */; };
 		CBDC317725123AF100BC0B72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDC317625123AF100BC0B72 /* Preview Assets.xcassets */; };
 		CBDC317A25123AF100BC0B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDC317825123AF100BC0B72 /* LaunchScreen.storyboard */; };
+		CBDC318425123D4000BC0B72 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318325123D4000BC0B72 /* CounterView.swift */; };
+		CBDC31872512410E00BC0B72 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC31862512410E00BC0B72 /* AppState.swift */; };
+		CBDC31892512491600BC0B72 /* IsThisPrimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC31882512491600BC0B72 /* IsThisPrimeModal.swift */; };
+		CBDC318B2512618A00BC0B72 /* WolframAlphaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */; };
+		CBDC318D2512623D00BC0B72 /* WolframNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */; };
+		CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		CBDC317625123AF100BC0B72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBDC317925123AF100BC0B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBDC317B25123AF100BC0B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDC318325123D4000BC0B72 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		CBDC31862512410E00BC0B72 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CBDC31882512491600BC0B72 /* IsThisPrimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsThisPrimeModal.swift; sourceTree = "<group>"; };
+		CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframAlphaResult.swift; sourceTree = "<group>"; };
+		CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframNetworking.swift; sourceTree = "<group>"; };
+		CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPrimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +68,9 @@
 		CBDC316C25123AF000BC0B72 /* isItPrime */ = {
 			isa = PBXGroup;
 			children = (
+				CBDC318125123D1E00BC0B72 /* App */,
 				CBDC316D25123AF000BC0B72 /* AppDelegate.swift */,
 				CBDC316F25123AF000BC0B72 /* SceneDelegate.swift */,
-				CBDC317125123AF000BC0B72 /* ContentView.swift */,
 				CBDC317325123AF100BC0B72 /* Assets.xcassets */,
 				CBDC317825123AF100BC0B72 /* LaunchScreen.storyboard */,
 				CBDC317B25123AF100BC0B72 /* Info.plist */,
@@ -73,6 +85,36 @@
 				CBDC317625123AF100BC0B72 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CBDC318125123D1E00BC0B72 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC31852512410400BC0B72 /* Model */,
+				CBDC318225123D2D00BC0B72 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CBDC318225123D2D00BC0B72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC317125123AF000BC0B72 /* ContentView.swift */,
+				CBDC318325123D4000BC0B72 /* CounterView.swift */,
+				CBDC31882512491600BC0B72 /* IsThisPrimeModal.swift */,
+				CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBDC31852512410400BC0B72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC31862512410E00BC0B72 /* AppState.swift */,
+				CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */,
+				CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDC318B2512618A00BC0B72 /* WolframAlphaResult.swift in Sources */,
+				CBDC31872512410E00BC0B72 /* AppState.swift in Sources */,
+				CBDC318D2512623D00BC0B72 /* WolframNetworking.swift in Sources */,
 				CBDC316E25123AF000BC0B72 /* AppDelegate.swift in Sources */,
+				CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */,
 				CBDC317025123AF000BC0B72 /* SceneDelegate.swift in Sources */,
 				CBDC317225123AF000BC0B72 /* ContentView.swift in Sources */,
+				CBDC318425123D4000BC0B72 /* CounterView.swift in Sources */,
+				CBDC31892512491600BC0B72 /* IsThisPrimeModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
