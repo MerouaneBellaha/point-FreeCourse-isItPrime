@@ -9,8 +9,8 @@
 import Foundation
 
 class AppState: ObservableObject {
-    @Published var count: Int { didSet { UserDefaults.standard.set(count, forKey: "count") }}
 
+    @Published var count: Int { didSet { UserDefaults.standard.set(count, forKey: "count") }}
     @Published var favoritePrimes: [Int] = []
 
     init(count: Int = 0) {

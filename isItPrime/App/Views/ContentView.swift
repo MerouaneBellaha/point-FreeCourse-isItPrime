@@ -33,3 +33,4 @@ struct ContentView_Peviews: PreviewProvider {
     }
 }
 
+// si state est un environmentObject ( possible de ne pas le déclarer ici ? )

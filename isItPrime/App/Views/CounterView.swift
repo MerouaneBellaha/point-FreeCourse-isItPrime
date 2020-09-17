@@ -18,26 +18,22 @@ struct CounterView: View {
     var body: some View {
         VStack {
             HStack {
-                Button(action: {
-                    self.state.count -= 1
-                }) { Text("-") }
+                Button(action: { self.state.count -= 1 })
+                { Text("-") }
 
                 Text(state.count.description)
                 
-                Button(action: {
-                    self.state.count += 1
-                }) { Text("+") }
+                Button(action: { self.state.count += 1 })
+                { Text("+") }
             }
 
-            Button(action: {
-                self.showIsThisPrimeModal = true
-            }) { Text("Is this prime?") }
+            Button(action: { self.showIsThisPrimeModal = true })
+            { Text("Is this prime?") }
 
             Button(action: {
-                self.WN.nthPrime(self.state.count) { prime in
-                    self.alertNthPrime = prime
-                }
-            }) {  Text("What is the \(ordinal(state.count)) prime?") }
+                self.WN.nthPrime(self.state.count) { self.alertNthPrime = $0 }
+            })
+            { Text("What is the \(ordinal(state.count)) prime?") }
         }
         .font(.title)
         .navigationBarTitle("Counter demo")
@@ -57,12 +53,5 @@ struct CounterView: View {
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
         CounterView(state: AppState())
-    }
-}
-
-
-extension Int: Identifiable {
-    public var id: String {
-        self.description
     }
 }

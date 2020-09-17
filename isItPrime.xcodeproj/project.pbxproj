@@ -19,6 +19,7 @@
 		CBDC318B2512618A00BC0B72 /* WolframAlphaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */; };
 		CBDC318D2512623D00BC0B72 /* WolframNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */; };
 		CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */; };
+		CBE313ED251343F10007EC80 /* Int + isPrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313EC251343F10007EC80 /* Int + isPrime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframAlphaResult.swift; sourceTree = "<group>"; };
 		CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframNetworking.swift; sourceTree = "<group>"; };
 		CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPrimeView.swift; sourceTree = "<group>"; };
+		CBE313EC251343F10007EC80 /* Int + isPrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + isPrime.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		CBDC318125123D1E00BC0B72 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CBE313EB251343D30007EC80 /* Extensions */,
 				CBDC31852512410400BC0B72 /* Model */,
 				CBDC318225123D2D00BC0B72 /* Views */,
 			);
@@ -115,6 +118,14 @@
 				CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CBE313EB251343D30007EC80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBE313EC251343F10007EC80 /* Int + isPrime.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				CBDC318D2512623D00BC0B72 /* WolframNetworking.swift in Sources */,
 				CBDC316E25123AF000BC0B72 /* AppDelegate.swift in Sources */,
 				CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */,
+				CBE313ED251343F10007EC80 /* Int + isPrime.swift in Sources */,
 				CBDC317025123AF000BC0B72 /* SceneDelegate.swift in Sources */,
 				CBDC317225123AF000BC0B72 /* ContentView.swift in Sources */,
 				CBDC318425123D4000BC0B72 /* CounterView.swift in Sources */,

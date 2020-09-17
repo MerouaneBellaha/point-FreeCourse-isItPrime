@@ -15,20 +15,11 @@ struct IsThisPrimeModal: View {
     var body: some View {
 
         ZStack {
-            isPrime(state.count) ?
+            state.count.isPrime() ?
                 AnyView(PrimeView(state: state)) :
                 AnyView(Text("\(state.count) is not Prime"))
         }
         .font(.title)
-    }
-
-    private func isPrime(_ p: Int) -> Bool {
-        if p <= 1 { return false }
-        if p <= 3 { return true }
-        for i in 2...Int(sqrt(Float(p))) {
-            if p % i == 0 { return false }
-        }
-        return true
     }
 }
 
@@ -60,11 +51,5 @@ struct PrimeView: View {
         isFavorite ?
             state.favoritePrimes.removeAll(where: { $0 == self.state.count}) :
             state.favoritePrimes.append(self.state.count)
-    }
-}
-
-struct NotPrimeView: View {
-    var body: some View {
-        Text("This is not a Prime")
     }
 }
