@@ -12,6 +12,8 @@ class AppState: ObservableObject {
 
     @Published var count: Int { didSet { UserDefaults.standard.set(count, forKey: "count") }}
     @Published var favoritePrimes: [Int] = []
+    @Published var loggedInUser: User?
+    @Published var activityFeed: [Activity] = [] 
 
     init(count: Int = 0) {
         self.count = count

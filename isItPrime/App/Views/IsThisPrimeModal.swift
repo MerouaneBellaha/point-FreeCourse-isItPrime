@@ -49,7 +49,7 @@ struct PrimeView: View {
 
     private func manageFavoritesPrimeArray() {
         isFavorite ?
-            state.favoritePrimes.removeAll(where: { $0 == self.state.count}) :
-            state.favoritePrimes.append(self.state.count)
+            state.removeFavoritePrime() :
+            state.addFavoritePrime()
     }
 }

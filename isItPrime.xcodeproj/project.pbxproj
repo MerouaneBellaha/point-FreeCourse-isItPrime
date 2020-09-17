@@ -20,6 +20,9 @@
 		CBDC318D2512623D00BC0B72 /* WolframNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */; };
 		CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */; };
 		CBE313ED251343F10007EC80 /* Int + isPrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313EC251343F10007EC80 /* Int + isPrime.swift */; };
+		CBE313F025134C4F0007EC80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313EF25134C4F0007EC80 /* User.swift */; };
+		CBE313F225134CB50007EC80 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313F125134CB50007EC80 /* Activity.swift */; };
+		CBE313F425134F7A0007EC80 /* AppState + AddAndRemovePrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313F325134F7A0007EC80 /* AppState + AddAndRemovePrime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframNetworking.swift; sourceTree = "<group>"; };
 		CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPrimeView.swift; sourceTree = "<group>"; };
 		CBE313EC251343F10007EC80 /* Int + isPrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + isPrime.swift"; sourceTree = "<group>"; };
+		CBE313EF25134C4F0007EC80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CBE313F125134CB50007EC80 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		CBE313F325134F7A0007EC80 /* AppState + AddAndRemovePrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState + AddAndRemovePrime.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +119,10 @@
 		CBDC31852512410400BC0B72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CBDC31862512410E00BC0B72 /* AppState.swift */,
-				CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */,
-				CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */,
+				CBE313F525134F8B0007EC80 /* AppState */,
+				CBE313EE25134C2B0007EC80 /* WolframService */,
+				CBE313EF25134C4F0007EC80 /* User.swift */,
+				CBE313F125134CB50007EC80 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +133,24 @@
 				CBE313EC251343F10007EC80 /* Int + isPrime.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBE313EE25134C2B0007EC80 /* WolframService */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC318A2512618A00BC0B72 /* WolframAlphaResult.swift */,
+				CBDC318C2512623D00BC0B72 /* WolframNetworking.swift */,
+			);
+			path = WolframService;
+			sourceTree = "<group>";
+		};
+		CBE313F525134F8B0007EC80 /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC31862512410E00BC0B72 /* AppState.swift */,
+				CBE313F325134F7A0007EC80 /* AppState + AddAndRemovePrime.swift */,
+			);
+			path = AppState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +230,13 @@
 				CBDC316E25123AF000BC0B72 /* AppDelegate.swift in Sources */,
 				CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */,
 				CBE313ED251343F10007EC80 /* Int + isPrime.swift in Sources */,
+				CBE313F225134CB50007EC80 /* Activity.swift in Sources */,
 				CBDC317025123AF000BC0B72 /* SceneDelegate.swift in Sources */,
 				CBDC317225123AF000BC0B72 /* ContentView.swift in Sources */,
+				CBE313F425134F7A0007EC80 /* AppState + AddAndRemovePrime.swift in Sources */,
 				CBDC318425123D4000BC0B72 /* CounterView.swift in Sources */,
 				CBDC31892512491600BC0B72 /* IsThisPrimeModal.swift in Sources */,
+				CBE313F025134C4F0007EC80 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

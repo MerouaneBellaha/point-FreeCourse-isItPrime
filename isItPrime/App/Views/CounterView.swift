@@ -13,6 +13,8 @@ struct CounterView: View {
     @ObservedObject var state: AppState
     @State var showIsThisPrimeModal = false
     @State var alertNthPrime: Int?
+    @State var isNthPrimeButtonDisabled = false
+
     var WN = WolframNetworking()
 
     var body: some View {
@@ -30,16 +32,23 @@ struct CounterView: View {
             Button(action: { self.showIsThisPrimeModal = true })
             { Text("Is this prime?") }
 
-            Button(action: {
-                self.WN.nthPrime(self.state.count) { self.alertNthPrime = $0 }
-            })
+            Button(action: { self.nthPrimeButtonAction() })
             { Text("What is the \(ordinal(state.count)) prime?") }
+            .disabled(isNthPrimeButtonDisabled)
         }
         .font(.title)
         .navigationBarTitle("Counter demo")
         .sheet(isPresented: $showIsThisPrimeModal) { IsThisPrimeModal(state: self.state) }
         .alert(item: $alertNthPrime) { n in
             Alert(title: Text("The \(ordinal(self.state.count)) prime is \(n)"), dismissButton: Alert.Button.default(Text("Ok")))
+        }
+    }
+
+    private func nthPrimeButtonAction() {
+        isNthPrimeButtonDisabled = true
+        WN.nthPrime(state.count) { prime in
+            self.alertNthPrime = prime
+            self.isNthPrimeButtonDisabled = false
         }
     }
 
