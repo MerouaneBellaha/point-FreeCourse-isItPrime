@@ -10,14 +10,14 @@ import SwiftUI
 
 struct IsThisPrimeModal: View {
 
-    @ObservedObject var state: AppState
+    @ObservedObject var store: Store<AppState, AppAction>
 
     var body: some View {
 
         ZStack {
-            state.count.isPrime() ?
-                AnyView(PrimeView(state: state)) :
-                AnyView(Text("\(state.count) is not Prime"))
+            store.value.count.isPrime() ?
+                AnyView(PrimeView(store: self.store)) :
+                AnyView(Text("\(store.value.count) is not Prime"))
         }
         .font(.title)
     }
@@ -25,18 +25,19 @@ struct IsThisPrimeModal: View {
 
 struct IsThisPrimeModal_Previews: PreviewProvider {
     static var previews: some View {
-        IsThisPrimeModal(state: AppState())
+        IsThisPrimeModal(store: Store(initialValue: AppState(),
+                                      reducer: appReducer))
     }
 }
 
 struct PrimeView: View {
 
-    @ObservedObject var state: AppState
-    var isFavorite: Bool { state.favoritePrimes.contains(state.count) }
+    @ObservedObject var store: Store<AppState, AppAction>
+    var isFavorite: Bool { store.value.favoritePrimes.contains(store.value.count) }
 
     var body: some View {
         VStack {
-            Text("\(state.count.description) is Prime 🔥")
+            Text("\(store.value.count.description) is Prime 🔥")
             Button(action: {
                 self.manageFavoritesPrimeArray()
             }) {
@@ -49,7 +50,7 @@ struct PrimeView: View {
 
     private func manageFavoritesPrimeArray() {
         isFavorite ?
-            state.removeFavoritePrime() :
-            state.addFavoritePrime()
+            store.send(.primeModal(.removeFavoritePrimeTapped)) :
+            store.send(.primeModal(.saveFavoritePrimeTapped))
     }
 }

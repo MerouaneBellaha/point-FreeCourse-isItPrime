@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CounterView: View {
 
-    @ObservedObject var state: AppState
+    @ObservedObject var store: Store<AppState, AppAction>
     @State var showIsThisPrimeModal = false
     @State var alertNthPrime: Int?
     @State var isNthPrimeButtonDisabled = false
@@ -20,12 +20,12 @@ struct CounterView: View {
     var body: some View {
         VStack {
             HStack {
-                Button(action: { self.state.count -= 1 })
+                Button(action: { self.store.send(.counter(.decrTapped)) })
                 { Text("-") }
 
-                Text(state.count.description)
+                Text(store.value.count.description)
                 
-                Button(action: { self.state.count += 1 })
+                Button(action: { self.store.send(.counter(.incrTapped)) })
                 { Text("+") }
             }
 
@@ -33,20 +33,20 @@ struct CounterView: View {
             { Text("Is this prime?") }
 
             Button(action: { self.nthPrimeButtonAction() })
-            { Text("What is the \(ordinal(state.count)) prime?") }
+                { Text("What is the \(ordinal(store.value.count)) prime?") }
             .disabled(isNthPrimeButtonDisabled)
         }
         .font(.title)
         .navigationBarTitle("Counter demo")
-        .sheet(isPresented: $showIsThisPrimeModal) { IsThisPrimeModal(state: self.state) }
+        .sheet(isPresented: $showIsThisPrimeModal) { IsThisPrimeModal(store: self.store) }
         .alert(item: $alertNthPrime) { n in
-            Alert(title: Text("The \(ordinal(self.state.count)) prime is \(n)"), dismissButton: Alert.Button.default(Text("Ok")))
+            Alert(title: Text("The \(ordinal(self.store.value.count)) prime is \(n)"), dismissButton: Alert.Button.default(Text("Ok")))
         }
     }
 
     private func nthPrimeButtonAction() {
         isNthPrimeButtonDisabled = true
-        WN.nthPrime(state.count) { prime in
+        WN.nthPrime(store.value.count) { prime in
             self.alertNthPrime = prime
             self.isNthPrimeButtonDisabled = false
         }
@@ -61,6 +61,7 @@ struct CounterView: View {
 
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView(state: AppState())
+        CounterView(store: Store(initialValue: AppState(),
+                                 reducer: appReducer))
     }
 }

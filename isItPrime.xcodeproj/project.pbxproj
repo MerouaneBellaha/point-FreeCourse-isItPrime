@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CBDC316E25123AF000BC0B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC316D25123AF000BC0B72 /* AppDelegate.swift */; };
 		CBDC317025123AF000BC0B72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC316F25123AF000BC0B72 /* SceneDelegate.swift */; };
-		CBDC317225123AF000BC0B72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC317125123AF000BC0B72 /* ContentView.swift */; };
+		CBDC317225123AF000BC0B72 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC317125123AF000BC0B72 /* HomeView.swift */; };
 		CBDC317425123AF100BC0B72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDC317325123AF100BC0B72 /* Assets.xcassets */; };
 		CBDC317725123AF100BC0B72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDC317625123AF100BC0B72 /* Preview Assets.xcassets */; };
 		CBDC317A25123AF100BC0B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDC317825123AF100BC0B72 /* LaunchScreen.storyboard */; };
@@ -21,15 +21,13 @@
 		CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */; };
 		CBE313ED251343F10007EC80 /* Int + isPrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313EC251343F10007EC80 /* Int + isPrime.swift */; };
 		CBE313F025134C4F0007EC80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313EF25134C4F0007EC80 /* User.swift */; };
-		CBE313F225134CB50007EC80 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313F125134CB50007EC80 /* Activity.swift */; };
-		CBE313F425134F7A0007EC80 /* AppState + AddAndRemovePrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE313F325134F7A0007EC80 /* AppState + AddAndRemovePrime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CBDC316A25123AF000BC0B72 /* isItPrime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = isItPrime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDC316D25123AF000BC0B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDC316F25123AF000BC0B72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CBDC317125123AF000BC0B72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CBDC317125123AF000BC0B72 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CBDC317325123AF100BC0B72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBDC317625123AF100BC0B72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBDC317925123AF100BC0B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,8 +40,6 @@
 		CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPrimeView.swift; sourceTree = "<group>"; };
 		CBE313EC251343F10007EC80 /* Int + isPrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + isPrime.swift"; sourceTree = "<group>"; };
 		CBE313EF25134C4F0007EC80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CBE313F125134CB50007EC80 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		CBE313F325134F7A0007EC80 /* AppState + AddAndRemovePrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState + AddAndRemovePrime.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +104,7 @@
 		CBDC318225123D2D00BC0B72 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CBDC317125123AF000BC0B72 /* ContentView.swift */,
+				CBDC317125123AF000BC0B72 /* HomeView.swift */,
 				CBDC318325123D4000BC0B72 /* CounterView.swift */,
 				CBDC31882512491600BC0B72 /* IsThisPrimeModal.swift */,
 				CBDC318E25126BDB00BC0B72 /* FavoritesPrimeView.swift */,
@@ -122,7 +118,6 @@
 				CBE313F525134F8B0007EC80 /* AppState */,
 				CBE313EE25134C2B0007EC80 /* WolframService */,
 				CBE313EF25134C4F0007EC80 /* User.swift */,
-				CBE313F125134CB50007EC80 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				CBDC31862512410E00BC0B72 /* AppState.swift */,
-				CBE313F325134F7A0007EC80 /* AppState + AddAndRemovePrime.swift */,
 			);
 			path = AppState;
 			sourceTree = "<group>";
@@ -180,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Merouane Bellaha";
 				TargetAttributes = {
 					CBDC316925123AF000BC0B72 = {
@@ -230,10 +224,8 @@
 				CBDC316E25123AF000BC0B72 /* AppDelegate.swift in Sources */,
 				CBDC318F25126BDB00BC0B72 /* FavoritesPrimeView.swift in Sources */,
 				CBE313ED251343F10007EC80 /* Int + isPrime.swift in Sources */,
-				CBE313F225134CB50007EC80 /* Activity.swift in Sources */,
 				CBDC317025123AF000BC0B72 /* SceneDelegate.swift in Sources */,
-				CBDC317225123AF000BC0B72 /* ContentView.swift in Sources */,
-				CBE313F425134F7A0007EC80 /* AppState + AddAndRemovePrime.swift in Sources */,
+				CBDC317225123AF000BC0B72 /* HomeView.swift in Sources */,
 				CBDC318425123D4000BC0B72 /* CounterView.swift in Sources */,
 				CBDC31892512491600BC0B72 /* IsThisPrimeModal.swift in Sources */,
 				CBE313F025134C4F0007EC80 /* User.swift in Sources */,
@@ -280,6 +272,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -340,6 +333,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
